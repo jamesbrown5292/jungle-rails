@@ -14,7 +14,7 @@
 
 # Ignore db creds / settings
 /config/database.yml
-
+.env
 *.rbc
 capybara-*.html
 .rspec

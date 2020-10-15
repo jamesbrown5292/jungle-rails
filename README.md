@@ -25,3 +25,4 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+ #https://connect.stripe.com/express/oauth/authorize?redirect_uri=https://connect.stripe.com/hosted/oauth&client_id=ca_ICiSGVwBLeQRnWdXAXuLxh3Rbcg7MDQm&state=onbrd_ICiwmVqgF28kJ1DqfsUEOnZmwB&stripe_user[country]=CA
