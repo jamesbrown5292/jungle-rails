@@ -1,2 +1,21 @@
 <h1>Admin::Dashboard#show</h1>
 <p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<div class="jumbotron">
+  <h1>Site statistics</h1>
+  <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th> Total inventory: </th>
+      <th> <%= @total_inventory %> </th>
+      <th> <p><a class="btn btn-primary btn-lg admin-btn" href="#" role="button">Product Admin</a></p> </th>
+    </tr>
+    <tr>
+      <th> Number of categories: </th>
+      <th> <%= @total_categories %> </th>
+    </tr>
+  </thead>
+</table>
+
+
+  
+</div>
