@@ -61,7 +61,7 @@ RSpec.describe User, type: :model do
     it 'returns the user when the correct credentials are given' do
       testUser = User.new(:name => "testy", :email => "testy@test.com", :password => "admin1234", :password_confirmation => "admin1234")
       testUser.save
-      foundUser = testUser.authenticate_with_credentials("testy@test.com", "admin1234")
+      foundUser = User.authenticate_with_credentials(testUser.email, testUser.password)
       expect(foundUser).to eql(testUser)
     end
     
@@ -69,28 +69,29 @@ RSpec.describe User, type: :model do
     it 'returns nil when the incorrect email is given' do
       testUser = User.new(:name => "testy", :email => "testy@test.com", :password => "admin1234", :password_confirmation => "admin1234")
       testUser.save
-      foundUser = testUser.authenticate_with_credentials("no@test.com", "admin1234")
+      foundUser = User.authenticate_with_credentials("no@test.com", testUser.password)
       expect(foundUser).to be_nil
     end
     
     it 'returns nil when the incorrect password is given' do
       testUser = User.new(:name => "testy", :email => "testy@test.com", :password => "admin1234", :password_confirmation => "admin1234")
       testUser.save
-      foundUser = testUser.authenticate_with_credentials("no@test.com", "wrongpassword")
+      foundUser = User.authenticate_with_credentials(testUser.email, "wrongpassword")
+      puts "found user is #{foundUser.inspect}"
       expect(foundUser).to be_nil
     end
 
     it 'returns the user when the correct credentials are given and the email contains whitespace at the beginning or end' do
       testUser = User.new(:name => "testy", :email => "testy@test.com", :password => "admin1234", :password_confirmation => "admin1234")
       testUser.save
-      foundUser = testUser.authenticate_with_credentials("    testy@test.com    ", "admin1234")
+      foundUser = User.authenticate_with_credentials("    testy@test.com    ", testUser.password)
       expect(foundUser).to eql(testUser)
     end
 
     it 'returns the user when the correct credentials are given and the email has the wrong case' do
       testUser = User.new(:name => "testy", :email => "testy@test.com", :password => "admin1234", :password_confirmation => "admin1234")
       testUser.save
-      foundUser = testUser.authenticate_with_credentials("tESTy@teST.COm", "admin1234")
+      foundUser = User.authenticate_with_credentials("tESTy@teST.COm", testUser.password)
       expect(foundUser).to eql(testUser)
     end
 
