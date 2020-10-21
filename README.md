@@ -8,24 +8,24 @@ Jungle is an e-commerce application built using ruby on rails.
 - Users see products on the home page. If a product is sold out, the image will show this. 
 - Clicking a product takes you through to a product description page.
 
-[link to products view!](docs/jungle-products.png)
+![link to products view!](docs/jungle-products.png)
 
 - Items can also be filtered by catregory
 
-[link to description view!](docs/jungle-electronics.png)
+![link to description view!](docs/jungle-electronics.png)
 
 - In the My Cart area, users can see what they have picked to buy. When the cart is empty, users will be prompted to shop for more items.
 
-[link to my cart view!](docs/jungle-my-cart.png)
-[link to empty cart view!](docs/jungle-empty-cart.png)
+![link to my cart view!](docs/jungle-my-cart.png)
+![link to empty cart view!](docs/jungle-empty-cart.png)
 
 - The admin area is where users are able to view stats about product inventory, add categories and add products
 
-[link to my admin view!](docs/jungle-site-stats.png)
+![link to my admin view!](docs/jungle-site-stats.png)
 
 - There is also a signup form where users can create an account.
 
-[link to my signup view!](docs/jungle-sign-up.png)
+![link to my signup view!](docs/jungle-sign-up.png)
 
 ## Setup
 
